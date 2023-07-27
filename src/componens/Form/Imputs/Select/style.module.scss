@@ -9,6 +9,10 @@
     .options {
       display: block;
     }
+    .selectBtn {
+      border-radius: 8px;
+      border: 2px solid #212529;
+    }
   }
   .selectBtn {
     display: flex;
@@ -23,10 +27,7 @@
       color: var(--color-grey4);
     }
   }
-  .selectBtn:hover {
-    border-radius: 8px;
-    border: 2px solid #212529;
-  }
+
   .options {
     position: relative;
     margin-top: 0.5rem;
@@ -40,6 +41,9 @@
       border-radius: 8px;
       align-items: center;
       background: var(--color-grey1);
+      .optionText {
+        color: var(--color-grey4);
+      }
       &.entry:hover {
         border-radius: 8px 8px 0 0;
         background: var(--color-grey2);

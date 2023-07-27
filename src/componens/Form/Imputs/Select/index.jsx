@@ -1,12 +1,10 @@
 import { useState } from "react";
 import styles from "./style.module.scss";
 import angleDown from "../../../../assets/ANGLE-DOWN.svg";
-export const Select = ({ type, setValue }) => {
-  const [text, setText] = useState("Entrada");
+export const Select = ({ type, setValue, value }) => {
   const [ative, setAtive] = useState(false);
 
   const handleClick = (event) => {
-    setText(event.target.textContent);
     setValue(event.target.textContent);
     setAtive(!ative);
   };
@@ -24,12 +22,13 @@ export const Select = ({ type, setValue }) => {
         onClick={handleClick}
       >
         <div className={styles.selectBtn}>
-          <span className={`body ${styles.sBtnText}`}>{text}</span>
+          <span className={`body ${styles.sBtnText}`}>{value}</span>
           <img src={angleDown} className={styles.dropDonwArrow}></img>
         </div>
 
         <ul className={styles.options}>
           <li
+            id="entry"
             value="Entrada"
             className={`${styles.option} ${styles.entry}`}
             onClick={handleClick}
@@ -37,6 +36,7 @@ export const Select = ({ type, setValue }) => {
             <span className={`body ${styles.optionText}`}>Entrada</span>
           </li>
           <li
+            id="exit"
             value="Despesa"
             className={`${styles.option} ${styles.exit}`}
             onClick={handleClick}

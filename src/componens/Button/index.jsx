@@ -6,7 +6,7 @@ export const SubmitBtn = ({ onClick }) => {
       type="submit"
       className={`${styles.btn} ${styles.btnForm} ${styles.full}`}
       onClick={onClick}
-      // 
+      //
     >
       Inserir o valor
     </button>
@@ -14,10 +14,7 @@ export const SubmitBtn = ({ onClick }) => {
 };
 export const DeleteBtn = ({ onClick }) => {
   return (
-    <button
-      className={`${styles.btn} ${styles.btnRemove}`}
-      onClick={onClick}
-    >
+    <button className={`${styles.btn} ${styles.btnRemove}`} onClick={onClick}>
       Excluir
     </button>
   );

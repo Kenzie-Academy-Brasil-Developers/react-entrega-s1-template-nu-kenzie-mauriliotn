@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-export const Input = ({ placeholder, id, type, desc, setValue, onInvalid }) => {
+export const Input = ({ placeholder, id, type, desc, value, setValue }) => {
   return (
     <>
       <div className={styles.flexbox}>
@@ -8,10 +8,11 @@ export const Input = ({ placeholder, id, type, desc, setValue, onInvalid }) => {
         </label>
         <input
           className={styles.inp}
+          placeholder={placeholder}
           type={type}
           name={id}
           id={id}
-          placeholder={placeholder}
+          value={value}
           onChange={(event) => setValue(event.target.value)}
         />
       </div>

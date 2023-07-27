@@ -8,14 +8,20 @@ import { ToastContainer, toast } from "react-toastify";
 export const Imputs = ({ addCard }) => {
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
-  const [type, setValue] = useState("Entrada");
+  const [type, setType] = useState("Entrada");
+
+  const defaultState = () => {
+    setDesc("");
+    setPrice("");
+    setType("Entrada");
+  };
 
   const submit = (e) => {
     e.preventDefault();
 
     {
       !desc
-        ? toast.warn("Por favor insira uma descrição para o valor", {
+        ? toast.warn("Por favor insira uma descrição para o valor✍️", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
@@ -26,7 +32,7 @@ export const Imputs = ({ addCard }) => {
             theme: "light",
           })
         : !price
-        ? toast.warn("Adicione um valor maior que zero!", {
+        ? toast.warn("Adicione um valor maior que zero!💰", {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
@@ -37,7 +43,7 @@ export const Imputs = ({ addCard }) => {
             theme: "light",
           })
         : (addCard({ desc, price, type }),
-         
+          defaultState(),
           toast.success(" Valor adicionado com sucesso", {
             position: "top-right",
             autoClose: 2000,
@@ -47,8 +53,7 @@ export const Imputs = ({ addCard }) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-          })),
-        console.log("oi");
+          }));
     }
   };
 
@@ -74,7 +79,7 @@ export const Imputs = ({ addCard }) => {
           value={price}
           setValue={setPrice}
         />
-        <Select value={type} setValue={setValue} />
+        <Select value={type} setValue={setType} />
         <SubmitBtn />
         <ToastContainer
           position="top-center"
