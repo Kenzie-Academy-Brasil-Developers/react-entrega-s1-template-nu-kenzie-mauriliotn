@@ -5,7 +5,7 @@ import { useState } from "react";
 import { SubmitBtn } from "../../Button";
 import { ToastContainer, toast } from "react-toastify";
 
-export const Imputs = ({ addCard }) => {
+export const Inputs = ({ addCard }) => {
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
   const [type, setType] = useState("Entrada");
