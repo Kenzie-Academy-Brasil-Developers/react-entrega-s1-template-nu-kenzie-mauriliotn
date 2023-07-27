@@ -1,0 +1,25 @@
+:root {
+  --font-primary: "Nunito", sans-serif;
+  --color-primary: #fd377e;
+  --color-primary2: #e34981;
+  --color-secondary: #03b898;
+  --color-grey4: #212529;
+  --color-grey3: #868e96;
+  --color-grey2: #e9ecef;
+  --color-grey1: #f8f9fa;
+}
+section {
+  width: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media (min-width: 796px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+}

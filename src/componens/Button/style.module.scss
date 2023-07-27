@@ -1,0 +1,36 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-family: var(--font-primary);
+  &.btnForm {
+    padding: 13px 20px;
+    color: var(--color-grey1);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary);
+  }
+  &.btnForm:hover {
+    border: 2px solid var(--color-primary2);
+    background: var(--color-primary2);
+  }
+  &.btnRemove {
+    padding: 3px 9px;
+    color: var(--color-grey4);
+    font-size: 0.625rem;
+    font-weight: 400;
+    border-radius: 2px;
+    background: var(--color-grey2);
+  }
+  &.btnRemove:hover {
+    color: var(--color-grey1);
+    background: var(--color-grey4);
+  }
+  &.full {
+    width: 100%;
+  }
+}

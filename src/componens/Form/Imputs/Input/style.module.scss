@@ -1,0 +1,27 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.inp {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-grey1);
+  background: var(--color-grey1);
+}
+
+.inp::placeholder {
+  color: var(--color-grey3);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

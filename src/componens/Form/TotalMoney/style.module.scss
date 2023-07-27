@@ -1,0 +1,20 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.875rem 1.25rem;
+
+  border-radius: 4px;
+  border: 1px solid var(--grey-2, #e9ecef);
+  background: #fff;
+  div {
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: var(--color-primary);
+    }
+  }
+}
+div.container {
+  padding: 0 1.6rem;
+}

@@ -1,0 +1,53 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.selectMenu {
+  width: 100%;
+  &.active {
+    .options {
+      display: block;
+    }
+  }
+  .selectBtn {
+    display: flex;
+    height: 3rem;
+    background: var(--color-grey1);
+    padding: 0 1rem;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    .sBtnText {
+      color: var(--color-grey4);
+    }
+  }
+  .selectBtn:hover {
+    border-radius: 8px;
+    border: 2px solid #212529;
+  }
+  .options {
+    position: relative;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    background: var(--color-grey1);
+    display: none;
+    .option {
+      display: flex;
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 8px;
+      align-items: center;
+      background: var(--color-grey1);
+      &.entry:hover {
+        border-radius: 8px 8px 0 0;
+        background: var(--color-grey2);
+      }
+      &.option.exit:hover {
+        border-radius: 0 0 8px 8px;
+        background: var(--color-grey2);
+      }
+    }
+  }
+}

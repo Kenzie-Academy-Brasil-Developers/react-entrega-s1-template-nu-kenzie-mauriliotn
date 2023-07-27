@@ -1,0 +1,14 @@
+.flexbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  padding: 1.875rem 1.25rem 2.625rem 1.3125rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.createFinanceBox {
+  max-width: 396px;
+}
